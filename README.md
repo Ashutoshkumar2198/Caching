@@ -18,3 +18,6 @@ In a distributed computing environment, a dedicated caching layer enables system
 
 ### Caching Best Practices: 
 When implementing a cache layer, it’s important to understand the validity of the data being cached. A successful cache results in a high hit rate which means the data was present when fetched. A cache miss occurs when the data fetched was not present in the cache. Controls such as TTLs (Time to live) can be applied to expire the data accordingly. Another consideration may be whether or not the cache environment needs to be Highly Available, which can be satisfied by In-Memory engines such as Redis. In some cases, an In-Memory layer can be used as a standalone data storage layer in contrast to caching data from a primary location. In this scenario, it’s important to define an appropriate RTO (Recovery Time Objective--the time it takes to recover from an outage) and RPO (Recovery Point Objective--the last point or transaction captured in the recovery) on the data resident in the In-Memory engine to determine whether or not this is suitable. Design strategies and characteristics of different In-Memory engines can be applied to meet most RTO and RPO requirements.
+
+
+![image](https://user-images.githubusercontent.com/110393859/183361288-6328ad0b-5338-4a30-aaa4-9fbae025f8c3.png)
